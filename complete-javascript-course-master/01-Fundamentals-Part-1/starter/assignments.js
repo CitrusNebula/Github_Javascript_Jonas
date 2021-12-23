@@ -1,3 +1,6 @@
+/*
+
+
 "Values and Variables";
 
 
@@ -55,3 +58,6 @@ if(usPopulation > avgPopulation){
 } else {
     console.log(`${country} population is ${avgPopulation - usPopulation} below average`)
 }
+
+
+*/

@@ -1,3 +1,5 @@
+/*
+
 ("Values and Variables");
 
 const country = "USA";
@@ -75,15 +77,56 @@ if (usPopulation > avgPopulation) {
 // );
 
 // converting to number prevents bugs
-const numNeighbours = Number(
-  prompt("How many neighbour countries does your country have?")
-);
+// const numNeighbours = Number(
+//   prompt("How many neighbour countries does your country have?")
+// );
 
-if (numNeighbours === 1) {
-  console.log("Only 1 border!");
-} else if (numNeighbours > 1) {
-  console.log("More than 1 border");
+// if (numNeighbours === 1) {
+//   console.log("Only 1 border!");
+// } else if (numNeighbours > 1) {
+//   console.log("More than 1 border");
+// } else {
+//   console.log("No borders");
+// }
+
+("Logical Operators");
+
+if (usLanguage === 'english' && usPopulation < 50000000 && isIsland === false) {
+  console.log(
+    `You should live in the ${country} `
+  )
 } else {
-  console.log("No borders");
+  console.log(
+    `The ${country} does not meet your requirements, sorry.`
+  )
 }
 
+("The Switch Statement");
+
+const language = 'english'
+
+switch (language) {
+  case "chinese":
+    console.log("MOST number of native speakers!")
+    break;
+  case "spanish":
+    console.log('2nd place in number of native speakers');
+    break;
+  case "english":
+    console.log("3rd place");
+    break;
+  case "hindi":
+    console.log("Number 4");
+    break;
+  case "arabic":
+    console.log("5th most spoken language");
+    break;
+  default:
+    console.log("Great language too :D");
+}
+
+("The Conditional (Ternary) Operator");
+
+console.log(`${country} population is ${usPopulation > 33000000 ? 'above' : 'below'} average`);
+
+*/

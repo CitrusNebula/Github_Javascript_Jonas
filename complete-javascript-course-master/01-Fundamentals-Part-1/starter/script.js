@@ -382,11 +382,11 @@ console.log(`I like to drink ${age >=18 ? 'wine 🍷' : 'water 💧'}`); // can 
 //   );
 // }
 
-("Coding Challenge 4");
+// ("Coding Challenge 4");
 
-const bill = 430;
-const tip =  // declaring tip
-  bill >= 50 && bill <= 300  // tip value condition, if in the range of 30-500 
-  ? bill * .15  // if tip is within range of 30-500
-  : bill * .20;  // if tip is not in range of 30-500
-  console.log(`The bill was ${bill}, the tip was ${tip}, and the total value is ${bill + tip}`);
+// const bill = 430;
+// const tip =  // declaring tip
+//   bill >= 50 && bill <= 300  // tip value condition, if in the range of 30-500 
+//   ? bill * .15  // if tip is within range of 30-500
+//   : bill * .20;  // if tip is not in range of 30-500
+//   console.log(`The bill was ${bill}, the tip was ${tip}, and the total value is ${bill + tip}`);

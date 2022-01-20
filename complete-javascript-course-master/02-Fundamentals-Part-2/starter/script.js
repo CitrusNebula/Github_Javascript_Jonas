@@ -140,29 +140,119 @@ console.log(dario);
 const tom = yearsUntilRetirement(1960, "Tom");
 console.log(tom);
 
-*/
+
 
 ("Coding Challenge 1");
 
 const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
 
-const scoresDolphins = calcAverage(44, 23, 71);
-const scoresKoalas = calcAverage(65, 54, 49);
-const scoresDolphins2 = calcAverage(85, 54, 41);
-const scoresKoalas2 = calcAverage(23, 34, 27);
+// game 1
+let scoresDolphins = calcAverage(44, 23, 71);
+let scoresKoalas = calcAverage(65, 54, 49);
+// game 2
+let scoresDolphins2 = calcAverage(85, 54, 41);
+let scoresKoalas2 = calcAverage(23, 34, 27);
 
 const checkWinner = function (scoresDolphins, scoresKoalas) {
   if (scoresDolphins >= scoresKoalas * 2) {
-    return `Dolphins win (${scoresDolphins} vs ${scoresKoalas})`;
+    console.log(`Dolphins win (${scoresDolphins} vs ${scoresKoalas})`);
   } else if (scoresKoalas >= scoresDolphins * 2) {
-    return `Koalas win (${scoresKoalas} vs ${scoresDolphins})`;
-  } else if (scoresDolphins === scoresKoalas){
-    return `We have a tie!`;
+    console.log(`Koalas win (${scoresKoalas} vs ${scoresDolphins})`);
   } else {
-    return `No winner!`;
+    console.log(`No winner!`);
   }
 };
-const game1 = checkWinner(scoresDolphins, scoresKoalas);
-console.log(game1);
-const game2 = checkWinner(scoresDolphins2, scoresKoalas2);
-console.log(game2);
+
+checkWinner(scoresDolphins, scoresKoalas);
+checkWinner(scoresDolphins2, scoresKoalas2);
+
+
+("Introduction to Arrays");
+
+const friend1 = 'Space';
+const friend2 = 'Time';
+const friend3 = 'Void';
+
+// common way to make an array
+const friends = ['Space', 'Time', 'Void'];
+console.log(friends);
+
+// different way of making an array 
+const y = new Array(1991, 1984, 2008, 2020);
+
+console.log(friends[0]);
+console.log(friends[2]);
+
+// .length indicates how many arguments the function expects
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+// non primative values like arrays can be mutated even when declared with const
+friends[2] = 'Abyss'
+console.log(friends);
+// can not reassign entire array value
+// friends = ['Bob', 'Alice']
+
+
+// can store different variable types in an array
+const firstName = 'Dario'
+const dario = [firstName, 'Nettleford', 2022 - 1996, 'artist', friends];
+console.log(dario);
+
+// Excercise 
+const calcAge2 = function (birthYear) {
+  return 2021 - birthYear;
+};
+
+const years = [1990, 1967, 2002, 2010, 2018];
+
+const age1 = calcAge2(years[0]);
+const age2 = calcAge2(years[1]);
+const age3 = calcAge2(years[years.length - 1]);
+console.log(age1, age2, age3);
+
+const ages = [calcAge2(years[0]), calcAge2(years[1]), calcAge2(years[years.length - 1])];
+console.log(ages);
+
+
+("Basic Array Opertions (Methods)");
+
+const friends = ["Space", "Time", "Void"];
+// .push adds elements to the end of the array
+// .push returns the length of the array
+const newLength = friends.push('Light');
+console.log(friends);
+console.log(newLength);
+
+// .unshift adds elements to the beggining of the array
+// also returns the length of the array
+friends.unshift('Darkness');
+console.log(friends);
+
+// .pop removes last element of the arrya
+friends.pop();
+// .pop returns the value that was removed
+const popped = friends.pop()
+console.log(friends);
+console.log(popped);
+
+// .shift removes the first element in an array
+friends.shift();
+console.log(friends);
+
+// .indexOf gives the position of an element in an array
+console.log(friends.indexOf('Time'));
+
+// .includes checks if an element is inside the array
+console.log(friends.includes('Space'));
+console.log(friends.includes("Darkness"));
+friends.push(1155);
+// .includes uses strict equality so it does not do type cohersion (integer 1155 not string 1155)
+console.log(friends.includes("1155"));
+console.log(friends.includes(1155));
+
+if (friends.includes('Time')){
+  console.log("Time itself is infinite but yours is fleeting");
+}
+
+*/

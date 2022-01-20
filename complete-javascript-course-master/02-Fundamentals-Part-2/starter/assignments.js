@@ -83,4 +83,49 @@ describePopulationJonas("Portugal", 10);
 describePopulationJonas("China", 1441);
 describePopulationJonas("USA", 332);
 
+
+
+("Introduction to Arrays");
+
+const populations = [333, 38, 83, 67];
+
+console.log(populations.length === 4)
+function percentageOfWorld1(population) {
+  return (population / 7900) * 100;
+}
+
+const percentages = [
+  percentageOfWorld1(populations[0]), 
+  percentageOfWorld1(populations[1]), 
+  percentageOfWorld1(populations[2]), 
+  percentageOfWorld1(populations[3])
+];
+
+console.log(percentages);
+
+
+("Basic Array Opertions (Methods)");
+
+const ukNeighbours = ['Belgium', 'Denmark', 'France', 'Germany', 'Norway'];
+console.log(ukNeighbours);
+ukNeighbours.push('Utopia')
+console.log(ukNeighbours);
+ukNeighbours.pop();
+console.log(ukNeighbours);
+
+if (!ukNeighbours.includes('Germany')){
+  console.log('Probably not a central European country :D')
+} else {
+  console.log('Probably a central European country :D')
+}
+console.log(ukNeighbours);
+// my way of changing norway to netherlands
+console.log(ukNeighbours.indexOf('Norway'));
+ukNeighbours[4] = 'Netherlands';
+console.log(ukNeighbours);
+
+// his way of changing 
+ukNeighbours[ukNeighbours.indexOf('Netherlands')] = 'Faroe Islands';
+console.log(ukNeighbours);
+
 */

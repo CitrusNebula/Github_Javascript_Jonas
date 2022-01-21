@@ -229,7 +229,7 @@ console.log(newLength);
 friends.unshift('Darkness');
 console.log(friends);
 
-// .pop removes last element of the arrya
+// .pop removes last element of the arry
 friends.pop();
 // .pop returns the value that was removed
 const popped = friends.pop()

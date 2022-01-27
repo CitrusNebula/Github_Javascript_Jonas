@@ -154,4 +154,30 @@ const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
 console.log(total);
 
+
+("Introduction to Objects");
+
+
+const myCountry = {
+  country: "Japan",
+  capital: "Tokyo",
+  language: "Japanese",
+  population: 125,
+  neighbours: ['Korea', 'Russia', 'China'],
+};
+
+("Dots vs. Bracket Notation");
+
+console.log(`${myCountry.country} has 
+${myCountry.population} million 
+${myCountry.language} people, 
+${myCountry.neighbours.length} neighbouring countries and a capital called 
+${myCountry.capital}`);
+
+myCountry.population += 2;
+console.log(myCountry.population);
+
+myCountry['population'] -= 2;
+console.log(myCountry.population)
+
 */

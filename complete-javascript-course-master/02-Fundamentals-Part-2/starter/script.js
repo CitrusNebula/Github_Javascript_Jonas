@@ -255,4 +255,62 @@ if (friends.includes('Time')){
   console.log("Time itself is infinite but yours is fleeting");
 }
 
+
+("Introduction to Objects");
+
+// object called dario, the contents within dario are called properties (property firstname with the value of Dario)
+const dario = {
+  firstName: 'Dario',
+  lastName: 'Nettleford',
+  age: 2022-1996,
+  job: 'web designer',
+  friends: ['Tommy', 'Alberto', 'Ayah']
+};
+
+
+
+("Dots vs. Bracket Notation");
+const dario = {
+  firstName: "Dario",
+  lastName: "Nettleford",
+  age: 2022 - 1996,
+  job: "web designer",
+  friends: ["Darkness", "Alberto", "Ayah"],
+};
+
+console.log(dario);
+
+// dot notation
+console.log(dario.lastName);
+// bracket notation
+console.log(dario['lastName']);
+
+// bracket notation allows you to put any expression
+const nameKey = 'Name';
+console.log(dario['first' + nameKey]);
+console.log(dario['last' + nameKey]);
+
+// when first needing to compute the property names, use bracket notation
+// otherwise use dot notation
+
+// const darioInfo = prompt('What do you want to know about Dario? (options: firstName, lastName, age, job, and friends');
+
+
+// if(dario[darioInfo]) {
+//   console.log(dario[darioInfo]);
+// } else {
+//   console.log(`No info found on that subject (${darioInfo})`)
+// }
+
+// adding properties to an object
+dario.location = 'Headspace';
+dario['twitter'] = '@citrusofnebula'
+console.log(dario);
+
+// Unlisted Challenge
+// write "Dario has 3 friends and his best friend is called darkness"
+
+const challengeString = `${dario.firstName} has ${dario.friends.length} friends, and his best friend is called ${dario.friends[0]}`;
+console.log(challengeString);
+
 */

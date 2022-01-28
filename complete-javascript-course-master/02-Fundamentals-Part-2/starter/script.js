@@ -313,4 +313,50 @@ console.log(dario);
 const challengeString = `${dario.firstName} has ${dario.friends.length} friends, and his best friend is called ${dario.friends[0]}`;
 console.log(challengeString);
 
+
+("Object Methods");
+
+const dario = {
+  firstName: "Dario",
+  lastName: "Nettleford",
+  birthYear: 1996,
+  job: "web designer",
+  friends: ["Darkness", "Alberto", "Ayah"],
+  hasDriversLicense: true,
+
+  // any function attached to an object is called a method
+  // must use expression and not declaration
+  // calcAge: function(birthYear){
+  //   return 2022 - birthYear;
+  // },
+
+  // calcAge: function () {
+  //   // this points to dario which is calling the method
+  //   return 2022 - this.birthYear;
+  // },
+  calcAge: function () {
+    // creates new age property on the dario object
+    this.age = 2022 - this.birthYear;
+    return this.age;
+  },
+  getSummary: function () {
+    return this.summaryString = `${this.firstName} is a ${this.calcAge()} year old ${this.job}, and he has 
+    ${this.hasDriversLicense ? 'a' : 'no'} driver's license`
+    // using ternary operator above
+  },
+};
+
+// dot notation
+console.log(dario.calcAge(1996));
+// bracket notation
+console.log(dario['calcAge'](1996));
+// using the 'this' keyword
+console.log(dario.calcAge());
+// most efficient way of getting age
+console.log(dario.age);
+
+// Unlisted Challenge
+// write "Dario is a 25-year web designer, and he has a drivers license"
+console.log(dario.getSummary());
+
 */

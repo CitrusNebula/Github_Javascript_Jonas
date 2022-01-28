@@ -164,6 +164,12 @@ const myCountry = {
   language: "Japanese",
   population: 125,
   neighbours: ['Korea', 'Russia', 'China'],
+  describe: function(){
+    return `${this.country} has ${this.population} million ${this.language} speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`
+  },
+  checkIsland: function(){
+    return this.isIsland = this.neighbours.length === 0 ? true : false; 
+  }
 };
 
 ("Dots vs. Bracket Notation");
@@ -178,6 +184,11 @@ myCountry.population += 2;
 console.log(myCountry.population);
 
 myCountry['population'] -= 2;
-console.log(myCountry.population)
+console.log(myCountry.population);
+
+("Object Methods");
+
+console.log(myCountry.describe());
+console.log(myCountry.checkIsland());
 
 */

@@ -191,7 +191,7 @@ console.log(myCountry.population);
 console.log(myCountry.describe());
 console.log(myCountry.checkIsland());
 
-*/
+
 
 
 ("Coding Challenge 3");
@@ -226,3 +226,65 @@ if (mark.bmi > john.bmi){
 } else {
   console.log(`Mark and John's BMI are the same!`)
 }
+
+
+
+("Iteration: The for Loop");
+
+// for loop keeps running while condition (rep <=10) is TRUE
+for (let rep = 1; rep <=50; rep++) {
+  console.log(`Voter number ${rep} is currently voting 🏋️‍♂️`);
+}
+
+
+
+
+("Looping Arrays, Breaking and Continuing");
+
+const populations = [333, 38, 83, 67];
+const percentages2 = [];
+
+ function percentageOfWorld1(population) {
+   return (population / 7900) * 100;
+ }
+
+for (let i = 0; i < populations.length; i++){
+  // runs the percofworld function using the current position of i
+  const perc = percentageOfWorld1(populations[i]);
+  // pushes the current value of perc into the percentages 2 array
+  percentages2.push(perc);
+}
+
+console.log(percentages2);
+
+
+('Looping Backwards and Loops in Loops');
+
+const listOfNeighbours = [
+  ["Canada", "Mexico"],
+  ["Spain"],
+  ["Norway", "Sweden", "Russia"],
+];
+
+// for (let i = 0; i < listOfNeighbours.length; i++) {
+//   // the y loop goes into the individual components of the grouped arrays
+//     for (let y = 0; y < listOfNeighbours[i].length; y++) {
+//       // canada and mexico are 0 and 1 at this point making the code output it singularly instead of together
+//       console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
+//     }
+// }
+
+
+for (let i = 0; i < listOfNeighbours.length; i++) {
+  console.log(listOfNeighbours[i]);
+  // the y loop goes into the individual components of the grouped arrays
+  for (let y = 0; y < listOfNeighbours[i].length; y++) {
+    // the y goes through the length of the i array
+    // canada and mexico are 0 and 1 at this point 
+    // the specific location of mexico would be the first iteration of i (i = 0) and y at 1
+    // sweden would be third iteration of i (i = 2) and y at 1
+    console.log(`Neighbour: ${listOfNeighbours[i][y]}`);
+  }
+}
+
+*/

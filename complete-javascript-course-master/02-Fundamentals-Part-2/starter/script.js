@@ -359,4 +359,84 @@ console.log(dario.age);
 // write "Dario is a 25-year web designer, and he has a drivers license"
 console.log(dario.getSummary());
 
+("Iteration: The for Loop");
+
+// for loop keeps running while condition (rep <=10) is TRUE
+for (let rep = 1; rep <=10; rep++) {
+  console.log(`Lifting weights repetition ${rep} 🏋️‍♂️`)
+}
+
+
+
+("Looping Arrays, Breaking and Continuing");
+
+
+const dario = [
+  'Dario',
+  'Nettleford',
+  2022 - 1996,
+  'web designer',
+  ["Tommy", "Alberto", "Ayah"],
+];
+
+const types = [];
+
+for (let i = 0; i < dario.length; i++) {
+  // reading from dario object
+  console.log(dario[i]);
+
+  // filling types array
+  // types[i] = typeof dario[i];
+  types.push(typeof dario[i]);
+}
+
+console.log(types);
+
+const years = [1996, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++){
+  ages.push(2022 - years[i]);
+}
+
+console.log(ages);
+
+// continue and break
+
+console.log('--- ONLY STRINGS ---')
+for (let i = 0; i < dario.length; i++) {
+  if(typeof dario[i] != 'string') continue;
+  console.log(dario[i]);
+}
+
+console.log('--- Break at number ---')
+for (let i = 0; i < dario.length; i++) {
+  if (typeof dario[i] === 'number') break;
+  console.log(dario[i]);
+}
+
+
+
+("Looping Backwards and Loops in Loops");
+
+const dario = [
+  "Dario",
+  "Nettleford",
+  2022 - 1996,
+  "web designer",
+  ["Tommy", "Alberto", "Ayah"],
+];
+
+for (let i = dario.length - 1; i >= 0; i-- ){
+  console.log(dario[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++){
+  console.log(`--- Starting exercise ${exercise}`);
+
+  for (let rep = 1; rep < 6; rep++){
+    console.log(`Lifting weight repetition ${rep} 🏋️‍♂️`);
+  }
+}
+
 */

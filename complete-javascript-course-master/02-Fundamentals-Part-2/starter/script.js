@@ -439,4 +439,36 @@ for (let exercise = 1; exercise < 4; exercise++){
   }
 }
 
+
+
+("The while Loop");
+
+// // for comparison 
+// for (let rep = 1; rep <= 10; rep++) {
+//   console.log(`Lifting weights repetition ${rep} 🏋️‍♂️`);
+// }
+
+
+let rep = 1;
+
+while (rep <= 10) {
+  console.log(`Lifting weights repetition ${rep} 🏋️‍♂️`);
+  rep++;
+}
+
+// random sets random number values (with decimals)
+// trunc removes any fractional digits
+// sets dice from 1-6
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+  // while dice is not 6, print roll to console
+  console.log(`you rolled a ${dice}`);
+  // sets dice from 1-6 again (to prevent infintie loop)
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6){
+    console.log(`you rolled a ${dice}! 🤩`)
+  }
+}
+
 */
